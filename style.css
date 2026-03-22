@@ -1,0 +1,97 @@
+:root {
+  --fundo: #f8fafc;
+  --texto: #0f172a;
+  --texto-secundario: #475569;
+  --destaque: #1d4ed8;
+  --card: #ffffff;
+  --borda: #cbd5e1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  color: var(--texto);
+  background: linear-gradient(135deg, #dbeafe 0%, #f8fafc 35%, #e2e8f0 100%);
+  display: grid;
+  place-items: center;
+  padding: 24px;
+}
+
+.pagina-links {
+  width: min(980px, 100%);
+  background: var(--card);
+  border-radius: 18px;
+  padding: 26px;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.1);
+}
+
+header h1 {
+  margin: 0;
+}
+
+header p {
+  margin: 8px 0 24px;
+  color: var(--texto-secundario);
+}
+
+.bloco-lista h2 {
+  margin-top: 0;
+  color: var(--texto);
+}
+
+.lista-atividades {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.lista-atividades > li {
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid var(--borda);
+  background: #f8fafc;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.item .data {
+  display: inline-block;
+  min-width: 165px;
+  font-weight: 700;
+  color: var(--texto);
+}
+
+.lista-atividades li + li {
+  margin-top: 4px;
+}
+
+.item a {
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--destaque);
+  line-height: 1.4;
+}
+
+.item a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 700px) {
+  .lista-atividades > li {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .item .data {
+    min-width: 0;
+  }
+}
